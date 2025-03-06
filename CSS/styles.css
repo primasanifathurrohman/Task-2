@@ -1,0 +1,201 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Section 1: Menu */
+/* Section 1: Menu */
+header {
+    background: #007bff;
+    color: white;
+    padding: 15px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Brand di ujung kiri */
+.brand {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+    flex: 1;
+}
+
+/* Menu di ujung kanan */
+.nav-table {
+    border-collapse: collapse;
+    flex: 1;
+    text-align: right;
+}
+
+.nav-table td {
+    padding: 0 15px;
+}
+
+.nav-table a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Section 2: Judul dan Foto Profil */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 20px auto;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    column-gap: 50px; /* ✅ Menambah jarak antar kolom */
+}
+
+/* Memberi lebih banyak padding untuk hero-text agar lebih jauh */
+.hero-text {
+    text-align: center;
+    padding: 30px; /* ✅ Meningkatkan jarak dari elemen lainnya */
+}
+
+/* Menambahkan margin kiri pada hero-image agar lebih jauh dari teks */
+.hero-image {
+    margin-left: 50px; /* ✅ Jarak tambahan antara teks dan gambar */
+}
+
+.hero-text h2 {
+    margin-bottom: 10px;
+}
+
+.hero-text button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Section 3: Biodata */
+.about {
+    text-align: center;
+    padding: 5px;
+}
+
+.bio-table {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.bio-table table {
+    width: 80%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.bio-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Section 4: Portfolio */
+.portfolio {
+    text-align: center;
+    padding: 5px;
+}
+
+/* Section 4: Portfolio */
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.portfolio-container {
+    width: 80%; /* ✅ Menyesuaikan dengan About Me */
+    max-width: 900px; /* ✅ Membatasi lebar maksimum */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ✅ Agar tetap responsif */
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Kotak masing-masing portofolio */
+.portfolio-item {
+    background: white;
+    padding: 15px;
+    border-radius: 1px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.about h2,
+.portfolio h2 {
+    color: #007bff;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1200px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-table td {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+
+    .bio-table table {
+        width: 100%;
+    }
+
+    .portfolio-grid {
+        display: block;
+    }
+
+    .portfolio-grid table {
+        width: 100%;
+    }
+}
